@@ -1,0 +1,109 @@
+$backColor: #7d7dec;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    a {
+        text-decoration: none;
+    }
+    header{
+        background-color: $backColor;
+        padding: 1.5em;
+        h1 {
+            margin: 0;
+            color: white;
+            font-size: 3em;
+            text-align: center;
+        }
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2vw;
+        margin: 3em;
+        .country {
+            padding-left: 5px;
+            min-height: 60px;
+            border: 1px solid;
+            align-items: center;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            transition: 0.1s;
+            img{
+                width: auto;
+                height: 50px;
+            }
+            p{
+                margin-left: 1em;
+            }
+        }
+        .country:hover{
+            background-color: $backColor;
+            color: white;
+            transition: 0.1s;
+        }
+    }
+
+    .button-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        button{
+            height: 2em;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            background: white;
+            border: none;
+            transition: 0.1s;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover{
+            background-color: $backColor;
+            color: white;
+            transition: 0.1s;
+        }
+    }
+
+    .region{
+        h2 {
+            margin: 0;
+        }
+        display: grid;
+        align-items: center;
+        font-size: 1.5em;
+        text-align: center;
+        height: 6em;
+        line-height: 3em;
+        cursor: pointer;
+        transition: 0.1s;
+    }
+    .region:hover{
+        background-color: $backColor;
+        color: white;
+        transition: 0.1s;
+    }
+    .currentCountry{
+        margin: 2em;
+        img{
+            max-height: 300px;
+        }
+        div{
+            margin-bottom: 1em;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
