@@ -25,7 +25,7 @@ body {
         .country {
             padding-left: 5px;
             min-height: 60px;
-            border: 1px solid;
+            border: 1px outset $backColor;
             align-items: center;
             cursor: pointer;
             display: grid;
@@ -78,6 +78,7 @@ body {
         line-height: 3em;
         cursor: pointer;
         transition: 0.1s;
+        border: 1px outset $backColor;
     }
     .region:hover{
         background-color: $backColor;
@@ -104,6 +105,11 @@ body {
         .container{
             display: grid;
             grid-template-columns: 1fr;
+        }
+        .currentCountry{
+            img{
+                max-height: 220px;
+            }
         }
     }
 }

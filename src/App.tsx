@@ -17,8 +17,8 @@ const App: React.FC = () => {
         	<Route component={Regions} path="/" exact />
           <Route component={Countries} path="/countries/:region"/>
           <Route component={Country} path="/country/:countryName"/>
-        </Switch>
-        </Provider>
+      </Switch>
+      </Provider>
     </BrowserRouter>
 	);
 }
